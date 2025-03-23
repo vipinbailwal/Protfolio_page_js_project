@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4bf9c02a64.js" crossorigin="anonymous"></script>
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+               <nav>
+                  <img src="" class="logo">
+                  <ul>
+                    <li><a href="#header">Home</a></li> 
+                    <li><a href="#about">About</a></li> 
+                    <li><a href="#services">My Profile</a></li> 
+                    <li><a href="#contact">Contact</a></li> 
+                  </ul>
+               </nav>
+               <div class="header-text">
+                         <p>FULL STACK WEB DEVELOPER</p>
+                         <h1>Hi my name is <br><span>VIPIN BAILWAL</span> </h1>
+                      
+                       
+               </div>
+        </div>
+    </div>
+    <!-- -------------------------------------------About me----------------------------------------------------- -->
+    <div id="about">
+        <div class="container">
+             <div class="row">
+                <div class="about-col-1">
+                    <img src="user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>As a passionate and innovative second-year B.Tech Computer Science student,
+                         I am actively seeking an internship opportunity to expand my web development skills.
+                          My academic journey has been marked by a deep engagement with cutting-edge 
+                          technologies and a commitment to practical learning,
+                         which I believe are crucial for a budding web developer.
+                </p>
+                <div class="tab-title">
+                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                     <p class="tab-links" onclick="opentab('education')">Education</p>
+                     <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Developemnt</span> <br>Web app Developemnt</li>
+                        <li><span>Problem Solver </span><br>DSA knowledge</li> 
+                        <li><span>Language Known </span><br>C, C++, HTML, CSS</li> 
+                    </ul>        
+                </div>
+                <!-- need to add something here -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019</span><br>Class X from Kendriya Vidyalaya New Tehri(91.2%)</li>
+                        <li><span>2021</span><br>Class XII from Kendriya Vidyalaya New Tehri(94.6%)</li> 
+                        <li><span>2022-26</span><br>Nit Uttarakhand(8.76 cgpa upto 3 sem )</li>
+                    </ul>        
+                </div>
+                <div class="tab-contents" id="achievements">
+                    <ul>
+                       <li><span>2022</span> <br>Jee Qualified(Air:23000)</li>
+                    </ul>        
+                </div>
+                </div>
+             </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------services----------------------------------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Profile</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Leetcode</h2>
+                    <p>Passionate problem solver with knowledge of algorithmic challenges.
+                         From dynamic programming to graph theory, 
+                         I thrive on finding elegant solutions. 
+                        LeetCode has not only prepared me for interviews but also fueled my passion for real-world problem-solving! 🚀
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-github"></i>
+                    <h2>Web project</h2>
+                    <p>
+                        Web developer passionate about creating meaningful digital experiences.
+                         My portfolio features diverse projects, from responsive landing pages to dynamic web apps. 
+                         Let’s build something remarkable! 🚀
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h2>Contest</h2>
+                    <p>As a competitive coder, 
+                        I thrive on intricate algorithmic challenges.
+                         LeetCode and GeeksforGeeks have sharpened my skills, fueling my passion for elegant code. Explore my journey! 🚀
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                
+
+            </div>
+                      
+        </div>
+    </div>
+    <!-- --------------------------------------------------------contact section--------------------------------------------------------------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> vbtech2024@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 812456890</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="my-cv.pdf" download class="btn"> Download Cv</a> 
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                         <input type="text" name="Name" placeholder="Your Name" required>
+                         <input type="email" name="email" placeholder="Your Email" required>
+                         <input type="text" name="linkedin" placeholder="Your Linkedin Id" required>
+                         <select name="profession" id="profession">
+                                <option>Choose your Profession</option>
+                                <option value="Student">Student</option>
+                                <option value="Recuriter">Recuriter</option>
+                         <textarea name="message"  rows="6" placeholder="Your Message"></textarea>
+                         <button type="sumbit" class="btn">Sumbit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+
+            </div>
+
+       
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+             for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+             }
+             for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+             }
+             event.currentTarget.classList.add("active-link");
+             document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxgsDQDFSmMbnew3y21KP-666uIi1JOhwWIQ02MG2howwFiD1JnDOSNwFGsHYDQvS-1/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg= document.getElementById("msg")
+       
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
